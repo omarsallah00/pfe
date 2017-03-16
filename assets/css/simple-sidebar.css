@@ -1,0 +1,279 @@
+
+.appHeader {
+    background: url("../images/linen1.jpg") repeat-x scroll left top transparent;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.appHeader .headerLogo {
+    float: left;
+    left: 30px;
+    position: relative;
+    top: 8px;
+}
+.appHeader .headerTitle {
+    color: #FFFFFF;
+    float: left;
+    font-size: 16pt;
+    font-weight: bold;
+    left: 60px;
+    top: 15px;
+    position: relative;
+}
+.appHeader .subHeaderTitle {
+    color: #CFCFCF;
+    font-size: small;
+    padding-left: 20px;
+}
+.appHeader .search {
+    float: left;
+    left: 80px;
+    position: relative;
+    top: 18px;
+}
+.appHeader .headerLinks {
+    float: right;
+    color: #FFFFFF;
+    position: relative;
+    top: 27px;
+    right: 10px;
+    text-align: right;
+}
+.appHeader .headerLinks a {
+    color: #FFFFFF;
+}
+
+#borderContainerOuter {
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: none;
+    padding: 0;
+    background-color: #FFFFFF
+}
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: absolute;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    /*    margin-top: -21px;*/
+    overflow-y: auto;
+    /*    background: #64adda;*/
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 10px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media screen and (max-width: 991px) {
+    /* hide the sidebars by default on extra-small devices (phones) */
+    .appHeader {
+        background: url("../images/linen1.jpg") repeat-x scroll left top transparent;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #borderContainerOuter {
+        position: absolute;
+        top: 40px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: none;
+        padding: 0;
+        background-color: #FFFFFF
+    }
+    .appHeader .headerLinks {
+        float: right;
+        color: #FFFFFF;
+        position: relative;
+        top: 10px;
+        right: 10px;
+        text-align: right;
+    }
+    #sidebarLeft, #sidebarBottom, #sidebarTop {
+        display: none;
+    }
+    /* no search widget in app header */
+    .appHeader .search {
+        display: none;
+    }
+    /* no logo in app header */
+    .appHeader .headerLogo {
+        display: none;
+    }
+    /* move the title when no logo */
+    .appHeader .headerTitle {
+        //left: 10px;
+        display: none;
+    }
+    .appHeader .headerLinks {
+        //display: none;
+
+    }
+    .appHeader .headerLinks #my_admin{
+        display: none;
+
+    }
+    //my_account
+    .appHeader .headerLinks #my_account{
+        display: none;
+
+    }
+    .appHeader .headerLinks #my_logout{
+        display: initial;
+
+    }
+    .my_admin {
+        display: none;
+
+    }
+}
+@media screen and (max-width: 767px) {
+    /* hide the sidebars by default on extra-small devices (phones) */
+    .appHeader {
+        background: url("../images/linen1.jpg") repeat-x scroll left top transparent;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #borderContainerOuter {
+        position: absolute;
+        top: 40px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: none;
+        padding: 0;
+        background-color: #FFFFFF
+    }
+    .appHeader .headerLinks {
+        float: right;
+        color: #FFFFFF;
+        position: relative;
+        top: 10px;
+        right: 10px;
+        text-align: right;
+    }
+    #sidebarLeft, #sidebarBottom, #sidebarTop {
+        display: none;
+    }
+    /* no search widget in app header */
+    .appHeader .search {
+        display: none;
+    }
+    /* no logo in app header */
+    .appHeader .headerLogo {
+        display: none;
+    }
+    /* move the title when no logo */
+    .appHeader .headerTitle {
+        //left: 10px;
+        display: none;
+    }
+    .appHeader .headerLinks {
+        //display: none;
+
+    }
+    .appHeader .headerLinks #my_admin{
+        display: none;
+
+    }
+    //my_account
+    .appHeader .headerLinks #my_account{
+        display: none;
+
+    }
+    .appHeader .headerLinks #my_logout{
+        display: initial;
+
+    }
+    .my_admin {
+        display: none;
+
+    }
+}
+
+
